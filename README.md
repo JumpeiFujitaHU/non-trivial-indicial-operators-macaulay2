@@ -1,0 +1,1 @@
+# non-trivial-indicial-operators-macaulay2
