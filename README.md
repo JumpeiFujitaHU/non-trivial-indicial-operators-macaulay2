@@ -12,6 +12,9 @@ This function is designed for $(A,b,w)$ satisfying the following conditions:
 1. The indicial ideal of $H_A(b)$ with respect to $w$ is different from the fake indicial ideal of $H_A(b)$ with respect to $w$.
 2. There exists a standard pair of the monomial ideal $\mathrm{in}_w(I_A)$ that is associated to $b$.
    Here $I_A$ is the toric ideal of $A$, and $\mathrm{in}_w(I_A)$ is the initial ideal of $I_A$ with respect to $w$.
+### Notes
+In several examples, I confirmed that the indicial operators computed by this function are non-fake.
+On the other hand, I also found examples where some computed operators are fake.
 ## Examples
 ### (1)
 
