@@ -2,7 +2,7 @@
 ### Usage:
 nonTrivialIndicialOperators(A,b,w)
 ### Inputs:
-- A, a d×n homogenious integer matrix,
+- A, a $d \times n$ homogeneous integer matrix,
 - b, a list, parameter vector,
 - w, a list, weight vector
 ### Output:
@@ -13,3 +13,64 @@ This function is designed for $(A,b,w)$ satisfying the following conditions:
 2. There exists a standard pair of the monomial ideal $\mathrm{in}_w(I_A)$ that is associated to $b$.
    Here $I_A$ is the toric ideal of $A$, and $\mathrm{in}_w(I_A)$ is the initial ideal of $I_A$ with respect to $w$.
 ## Examples
+### (1)
+
+i1 : load"nonTrivialIndicialOperators.m2"
+
+i2 : A = matrix{{1,1,1,1},{0,1,3,4}}
+
+o2 = |1 1 1 1|
+
+$\hspace{8.7mm}$ |0 1 3 4|
+
+o2 :  Matrix $ZZ^2$ ⟵ $ZZ^4$
+  
+i3 : b = {2,6}
+
+o3 =  {2,6} 
+
+o3 :  List 
+
+i4 : w = {0,0,2,1}
+
+o4 =  {0,0,2,1} 
+
+o4 :  List 
+
+i5 : nonTrivialIndicialOperators(A,b,w)
+
+o5 =  ideal($9\theta_1^2\theta_4^2-9\theta_1^2\theta_4-9\theta_1\theta_4^2+9\theta_1\theta_4$) 
+
+o5 :  Ideal of $QQ[\theta_1..\theta_4]$
+
+### (2)
+
+i1 : load"nonTrivialIndicialOperators.m2"
+
+i2 : A = matrix{{1,1,1,1,1,1},{0,1,1,0,-1,-1},{-1,-1,0,1,1,0}}
+
+o2 = |1 1 1 1 1 1|
+
+$\hspace{8.7mm}$ |0 1 1 0 -1 -1|
+
+$\hspace{8.7mm}$ |-1 -1 0 1 1 0|
+
+o2 :  Matrix $ZZ^3$ ⟵ $ZZ^6$
+  
+i3 : b = {2,0,1}
+
+o3 =  {2,0,1} 
+
+o3 :  List 
+
+i4 : w = {0,0,3,0,5,1}
+
+o4 =  {0,0,3,0,5,1} 
+
+o4 :  List 
+
+i5 : nonTrivialIndicialOperators(A,b,w)
+
+o5 =  ideal($-2\theta_2\theta_6^2+2\theta_2\theta_6, -2\theta_2^2\theta_6+2\theta_2\theta_6, -4\theta_1\theta_4\theta_5, -3\theta_1\theta_3\theta_4$) 
+
+o5 :  Ideal of $QQ[\theta_1..\theta_6]$
