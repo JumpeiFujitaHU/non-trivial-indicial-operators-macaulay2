@@ -69,7 +69,7 @@ may fail with the error "file not found on path". In that case, either move to t
 
 ### (1)
 
-i1 : load"nonTrivialIndicialOperators.m2"
+i1 : load "nonTrivialIndicialOperators.m2"
 
 i2 : A = matrix{{1,1,1,1},{0,1,3,4}}
 
@@ -116,7 +116,7 @@ o8 =  false
 
 ### (2)
 
-i1 : load"nonTrivialIndicialOperators.m2"
+i1 : load "nonTrivialIndicialOperators.m2"
 
 i2 : A = matrix{{1,1,1,1,1,1},{0,1,1,0,-1,-1},{-1,-1,0,1,1,0}}
 
