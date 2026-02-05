@@ -57,6 +57,18 @@ This function is designed for $(A,b,w)$ satisfying the following conditions:
 
 ## Examples
 
+### Loading the file
+
+If you start Macaulay2 outside the repository directory, the command
+
+`load "nonTrivialIndicialOperators.m2"`
+
+may fail with the error "file not found on path". In that case, either move to the repository directory, or locate the file and load it by path:
+
+`hits = select(findFiles ".", f -> baseFilename f == "nonTrivialIndicialOperators.m2");`
+
+`load first hits`
+
 ### (1)
 
 i1 : load"nonTrivialIndicialOperators.m2"
