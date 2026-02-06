@@ -18,7 +18,7 @@ OperationAstFn = (monomialsList, LT, NL, wmp) -> (
   apply(monomialsList, m -> preOperationAstFn(m, LT, NL, wmp, memo))
 );
 ChoosefFn = (A, sigma, nonsigma) -> (
-  K := gens ker transpose substitute (submatrix(A, , apply(sigma, j->j-1)), QQ);          -- d x r（列が基底）
+  K := gens ker transpose substitute (submatrix(A, , apply(sigma, j->j-1)), QQ);
   f := submatrix(K, , {0});
   done := {};
   for i in nonsigma do (
@@ -134,4 +134,5 @@ fakeIndicialIdeal = (A,beta,w,thetaRing) -> (
   InwIA = inw(substitute(IA, D), wmp);
   Find = distraction(InwIA, thetaRing) + distraction(ideal(eulerOperators(A,beta,D)),thetaRing);
   Find
+
 );
