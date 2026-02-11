@@ -67,6 +67,14 @@ may fail with the error "file not found on path". In that case, either move to t
 
 `load first select(findFiles ".", f -> baseFilename f == "nonTrivialIndicialOperators.m2")`
 
+If you upload the same repository multiple times, the web interface may keep multiple extracted copies. In that case, the one-liner using `findFiles` may load an unintended (possibly older) copy. If this happens, move to the extracted repository directory and run
+
+`load "nonTrivialIndicialOperators.m2"`
+
+there.
+
+Alternatively, download `nonTrivialIndicialOperators.m2` from this repository and use it locally.
+
 ### (1)
 
 i1 : load "nonTrivialIndicialOperators.m2"
